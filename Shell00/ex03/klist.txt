@@ -1,0 +1,6 @@
+Credentials cache: API:EDC7BF10-D468-4EB2-8624-1A96FC9A091B
+        Principal: rolopez-@42BARCELONA.COM
+
+  Issued                Expires               Principal
+Dec  1 12:35:15 2021  Dec  1 22:35:15 2021  krbtgt/42BARCELONA.COM@42BARCELONA.COM
+Dec  1 12:35:17 2021  Dec  1 22:35:15 2021  HTTP/student-storage.42barcelona.com@42BARCELONA.COM
