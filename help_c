@@ -1,0 +1,118 @@
+rolopez-@student.42barcelona.com
+
+intra.42.fr
+
+C00
+
+"gcc archivo.c" - compilar funcion c
+"./archivo.out" - ejecutar archivo compilado
+"gcc -Wall -Werror -Wextra" - muestra todos los errores
+
+
+variables:
+
+int - integer (4 octetos sin decimales)
+long int - integer (8 octetos)
+short int - integer (2 octetos)
+char - ocupa un octeto (8 caracteres)
+float - numeros decimales muy grandes (ocupa 4 octetos)
+double - el doble que float (ocupa 8 octetos)
+signed [char,int] - nos permite ir de -127  a 127
+unsigned [char,int] - nos permite ir de 0 a 255
+
+
+tablas (matrix):
+
+int tabla[n] - tabla de 1 dimension donde n es el numero de columnas
+int tabla[n][m] - tabla de 2 dimensiones donde m  es el numero de columnas
+ej. "int a[10];" - donde a es una tabla de 10 elementos
+ej. "a[0] = 12;" - le damos el valor 12 a la primera posicion de la tabla
+ej. "a[0][b] = 12;" - le damos el valor 12 a la columna 0 y el valor de la variable b a la fila 3
+
+
+operaciones:
+https://es.wikipedia.org/wiki/Anexo:Operadores_de_C_y_C%2B%2B
+
+% - muestra el resto de una division
+ej. "i = 47 % 12" - el resultado seria 11
+() - usar parentesis fuerza la operacion que hay dentro
+
+ej. "printf("%d\n", a * 23);" - donde mostramos el resultado de la operacion a * 23
+
+"i++" - incrementa el valor de la variable en 1
+"i--" - resta el valor de la variable en 1
+
+* si queremos sumar o restar el valor en la misma linea, invertimos la operacion, es decir ++i o --i
+
+& - operador and
+| - operador or (pipe)
+^ - operador or exclusivo
+~ - operador invertir
+! - 
+<< o >> - Desplazar hacia la izquierda o derecha
+
+== - Compara si los dos valores son iguales
+!= - Compara si los dos valores son diferentes
+< o > - Compara si es mayor o menor
+<= - Compara si es menor o igual, etc
+!! - negacin
+|| - Compara or
+&& - Compara and
+
+Variables ternarias
+ej. a == 42 ? 12 : 13 (a va a coger el valor 12 si a es igual a 42, sino coge el valor 13)
+
+codigo:
+
+printf - muestra en pantalla cualquier instruccion
+ej. "printf("Hello %d %c world\n", a, b);"
+\n - es un salto de linea
+%d - valor de la variable (ex. 107)
+%c - valor equivalent en char (ex. k)
+a, b - variables mostradas por orden de entrada
+
+
+sizeof(variable) - Muestra el tamanyo de caracteres de una variable
+
+if (condition)
+{
+	printf("hello\n");
+}
+else [if()]
+{
+	whatever;
+}
+
+switch(variable)
+{
+	case 1:
+		printf("hello\n");
+		break; - corta el condicional
+	case 2:
+		printf("world\n");
+	default:
+		printf("hola\n");
+}
+
+
+while (condicion)
+{
+	printf("hello\n");
+}
+
+
+do
+{
+	printf("hello\n");
+}
+while (condicion);
+
+
+for (i = 0; i < 10; i++) - valor inicial, condicion, que hacer cuando termine cada bucle
+{
+	printf("hello\n");
+}
+
+break; - cortar bucle
+continue; - mantener el bucle
+

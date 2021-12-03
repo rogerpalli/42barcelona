@@ -1,0 +1,114 @@
+rolopez-@student.42barcelona.com
+
+intra.42.fr
+
+rtbalabukha
+Arham4
+
+mv - mover
+
+rm - borrar
+
+rm -rf .git - eliminar git
+
+tar -xf ficherocomprimido.tar
+
+chmod
+x-----x-----x-----------------------------------x
+| rwx |  7  | Lectura, escritura y ejecución    |
+| rw- |  6  | Lectura, escritura        |
+| r-x |  5  | Lectura y ejecución       |
+| r-- |  4  | Lectura               |
+| -wx |  3  | Escritura y ejecución             |
+| -w- |  2  | Escritura                         |
+| --x |  1  | Ejecución             |
+| --- |  0  | Sin permisos          |
+x-----x-----x-----------------------------------x
+
+Token actual:  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
+
+Shell00
+
+Ex00: z
+Ex01: Permisos y horas
+Ex02: Permisos, horas y redireccion
+Ex03: klist > klist.txt
+Ex04: ls -mptU (en vez de: ls -mApU)
+Ex05: Error commit
+Ex06: Error commit (git ls-files --others -i --exclude-standard)
+Ex07: Using Patch
+Ex08: find . -type f \( -name '*~' -o -name '#*#' \) -print -delete  (en vez de: find . -name "*~" -o -name "#*#" -delete)
+Ex09: 
+Contenido test:
+0000000000000000000000000000000000000000042
+Contenido ft_magic:
+41 string 42 42 file
+
+en el byte 41 encuentra el string 42 y si lo encuentra muestra 42 file.
+
+file -m ft_magic test
+
+
+Shell01
+
+Ex01
+groups $FT_USER | tr ' ' ','
+
+"groups" muestra los permisos de los grupos
+"$FT_USER" es una variable donde le asignamos tipo de grupo (ej. daemon)
+"|" encadena comandos
+"tr ' ' ','" sustituye un caracter por otro. En este caso sustituye los espacios por comas.
+
+
+Ex02
+find . *.sh | sed -e 's/.sh$//'
+
+"find . *.sh" busca en el directorio y subdirectorios todos los ficheros con extension .sh
+"|" encadena comandos
+"sed" reemplaza texto en un archivo.
+"-e" -e para usar varios comandos
+" 's/.sh$//'" sustituye la cadena .sh$ por espacio vacio
+
+
+Ex03
+ls -l -R | wc -l
+
+"ls -l -R" Lista todos los ficheros del directorio actual y subdirectorios (-R)
+"|" encadena comandos
+"wc -l" word count cuenta lineas, palabras o bytes. Con el -l cuenta lineas.
+
+
+Ex04
+ifconfig -a | grep ether | sed -e 's/ether//'
+
+"ifconfig -a" muestra la configuracion de interfaces de red. Con -a muestra la info de todas las interfaces de tu sistema.
+"|" encadena comandos
+"grep ether" grep lee un fichero y muestra las lineas que contengan ese contenido (ether)
+"|" encadena comandos
+"sed -e 's/ether//'" elimina la cadena ether del resultado
+
+
+Ex05
+Crear un fichero y renombrarlo con un copy+paste.
+
+
+Ex06
+ls -l | awk 'NR % 2 == 0'
+
+"ls -l" lista el contenido detallado de la carpeta
+"|" encadena comandos
+"awk 'NR % 2 == 0'" awk analiza ficheros para buscar un nombre o anyadirlo en el fichero. NR muestra todos los resultados encontrados. %2 == 0 para mostrar cada segunda linea empezando por la linea 0.
+
+
+Ex07
+cat /etc/passwd | sed -e 's/#.*//' -e 's/[ ^I]*$//' -e '/^$/ d' -e 's/:.*//g' \
+ | tr '\n' ',' | rev | tr "," "\n" | sort -r | tr "\n" ","  \
+ | sed -e 's/, */, /g' -e 's/.$//' -e 's/.\{3\}$//' | tr '\n' '.'
+
+
+Ex08
+FT_NBR1=\'?"\"'\
+FT_NBR2=rcrdmddd
+chmod +x add_chelou.sh
+
+
