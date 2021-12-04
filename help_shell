@@ -10,6 +10,7 @@ mv - mover
 rm - borrar
 
 rm -rf .git - eliminar git
+git rm --cached client_folder
 
 tar -xf ficherocomprimido.tar
 

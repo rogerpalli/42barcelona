@@ -1,2 +1,2 @@
-#!/bin/bash
-git log | grep commit | tail -n 5 | cut -f 2 -d ' '
+#!/bin/sh
+git log -n 5 --format=%H

@@ -11,14 +11,17 @@ C00
 
 variables:
 
-int - integer (4 octetos sin decimales)
+int - integer o alfanumerico (4 octetos sin decimales)
 long int - integer (8 octetos)
 short int - integer (2 octetos)
 char - ocupa un octeto (8 caracteres)
-float - numeros decimales muy grandes (ocupa 4 octetos)
+float - numeros decimales (ocupa 4 octetos)
 double - el doble que float (ocupa 8 octetos)
 signed [char,int] - nos permite ir de -127  a 127
 unsigned [char,int] - nos permite ir de 0 a 255
+
+static int - define una variable para solo la funcion donde se ha definido
+const int - define una variable de tipo constante (su valor no varia)
 
 
 tablas (matrix):
@@ -115,4 +118,11 @@ for (i = 0; i < 10; i++) - valor inicial, condicion, que hacer cuando termine ca
 
 break; - cortar bucle
 continue; - mantener el bucle
+
+void function(); - si la escribimos arriba del codigo, definimos que la funcion es global
+static void function(); - static indica que la funcion solo se podra usar dentro de esta pagina (local)
+
+int function(int a,float b); - puedes pasar variables por parametro. Ej. function(40,0.5);
+
+
 
