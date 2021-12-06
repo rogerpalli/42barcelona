@@ -7,14 +7,12 @@ void	ft_putchar(char c) {
 
 void	ft_print_alphabet(void) {
 	char i = 'a';
-	
-	while (i!='z') {
-		ft_putchar(i);
-		i++;
-	}
 
+	for (i='a'; i <= 'z'; i++) {
+		ft_putchar(i);
+	}
 }
 
-int main (void) {
+int main () {
 	ft_print_alphabet();
 }
