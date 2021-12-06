@@ -5,16 +5,14 @@ void	ft_putchar(char c) {
 	write(1, &c, 1);
 }
 
-void	ft_print_reverse_alphabet(void) {
-	char i = 'z';
+void	ft_print_numbers(void) {
+	char i = '0';
 
-	while (i!='a'-1) {
+	for (i='0'; i <= '9'; i++) {
 		ft_putchar(i);
-		i--;
 	}
-
 }
 
 int main () {
-	ft_print_reverse_alphabet();
+	ft_print_numbers();
 }

@@ -1,4 +1,2 @@
-#!/bin/bash
-cat /etc/passwd | sed -e 's/#.*//' -e 's/[ ^I]*$//' -e '/^$/ d' -e 's/:.*//g' \
- | tr '\n' ',' | rev | tr "," "\n" | sort -r | tr "\n" ","  \
- | sed -e 's/, */, /g' -e 's/.$//' -e 's/.\{3\}$//' | tr '\n' '.'
+cat /etc/passwd | sed '/^#/d' | sed -n 'n;p' | sed 's/:\(.*\)//g' | rev | sort -r | awk 'NR >= ENVIRON["FT_LINE1"] && NR <= ENVIRON["FT_LINE2"]' | tr '\n' ' ' | sed 's/ /, /g' | sed 's/\(.*\), /\1./' | tr -d '\n'
+

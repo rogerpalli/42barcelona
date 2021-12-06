@@ -1,1 +1,1 @@
-ifconfig -a | grep ether | sed -e 's/ether//'
+ifconfig -a | grep ether | sed -e 's/	ether //'

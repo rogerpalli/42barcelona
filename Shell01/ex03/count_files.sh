@@ -1,1 +1,1 @@
-ls -l -R | wc -l
+ls . | wc -l | sed 's/ //g'

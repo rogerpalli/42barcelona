@@ -1,1 +1,1 @@
-find . *.sh | sed -e 's/.sh$//'
+find . -iname "*.sh" -exec basename {} .sh \;

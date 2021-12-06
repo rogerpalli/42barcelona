@@ -8,11 +8,9 @@ void	ft_putchar(char c) {
 void	ft_print_reverse_alphabet(void) {
 	char i = 'z';
 
-	while (i!='a'-1) {
+	for (i='z'; i >= 'a'; i--) {
 		ft_putchar(i);
-		i--;
 	}
-
 }
 
 int main () {
