@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rolopez- <rolopez-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/07 12:29:03 by rolopez-          #+#    #+#             */
-/*   Updated: 2021/12/07 12:33:37 by rolopez-         ###   ########.fr       */
+/*   Created: 2021/12/07 12:49:10 by rolopez-          #+#    #+#             */
+/*   Updated: 2021/12/08 17:34:37 by rolopez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <unistd.h>
 
-void	ft_print_reverse_alphabet(void)
+void	ft_putchar(char c)
 {
-	char	i;
+	write(1, &c, 1);
+}
 
-	i = 'z';
-	while (i != 'a' -1)
+void	ft_putnbr(int nb)
+{
+	long int	li;
+
+	li = nb;
+	if (li < 0)
 	{
-		write(1, &i, 1);
-		i--;
+		ft_putchar('-');
+		li = -li;
 	}
+	if (li > 9)
+	{
+		ft_putnbr(li / 10);
+		ft_putnbr(li % 10);
+	}
+	else
+		ft_putchar(li + '0');
 }

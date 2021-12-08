@@ -1,12 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rolopez- <rolopez-@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/07 11:33:12 by rolopez-          #+#    #+#             */
+/*   Updated: 2021/12/07 12:16:40 by rolopez-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include <unistd.h>
 
-void	ft_print_alphabet(void) {
-	char i = 'a';
-	
-	while (i!='z'+1) {
+void	ft_print_alphabet(void)
+{
+	char	i;
+
+	i = 'a';
+	while (i != 'z' +1)
+	{
 		write(1, &i, 1);
 		i++;
 	}
-
 }

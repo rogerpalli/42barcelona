@@ -7,7 +7,8 @@ C00
 "gcc archivo.c" - compilar funcion c
 "./archivo.out" - ejecutar archivo compilado
 "gcc -Wall -Werror -Wextra" - muestra todos los errores
-'fn' +'f1'- muestra header correcto
+fn + f1 - muestra header 42 (vim)
+Norminette - Corrige formato
 
 
 variables:

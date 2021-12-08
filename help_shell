@@ -62,11 +62,10 @@ groups $FT_USER | tr ' ' ','
 
 
 Ex02
-find . *.sh | sed -e 's/.sh$//'
+find . -iname "*.sh" -exec basename {} .sh \;
 
-"find . *.sh" busca en el directorio y subdirectorios todos los ficheros con extension .sh
-"|" encadena comandos
-"sed" reemplaza texto en un archivo.
+"find . -name "*.sh"" busca en el directorio y subdirectorios todos los ficheros con extension .sh
+"-exec basename {} .sh \" reemplaza texto en un archivo.
 "-e" -e para usar varios comandos
 " 's/.sh$//'" sustituye la cadena .sh$ por espacio vacio
 
