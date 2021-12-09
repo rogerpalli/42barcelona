@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rolopez- <rolopez-@student.42barcel>       +#+  +:+       +#+        */
+/*   By: ffornes- <ffornes-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/09 13:28:23 by rolopez-          #+#    #+#             */
-/*   Updated: 2021/12/09 17:10:14 by rolopez-         ###   ########.fr       */
+/*   Created: 2021/12/08 15:43:50 by ffornes-          #+#    #+#             */
+/*   Updated: 2021/12/08 16:53:33 by ffornes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <unistd.h>
 
-void	ft_ft(int *nbr)
+int	ft_strlen(char *str);
+
+int	main(void)
 {
-	*nbr = 42;
+	char	str[] = "Hola";
+	int	i;
+
+	i = ft_strlen(str);
+	printf("%d\n", i);
+	return (0);
 }

@@ -9,7 +9,7 @@ C00
 "gcc -Wall -Werror -Wextra" - muestra todos los errores
 fn + f1 - muestra header 42 (vim)
 Norminette - Corrige formato
-Norminette g -R CheckForbiddenSourceHeader / Corrige formato C01
+Norminette -R CheckForbiddenSourceHeader / Corrige formato C01
 
 
 variables:
@@ -127,6 +127,24 @@ void function(); - si la escribimos arriba del codigo, definimos que la funcion 
 static void function(); - static indica que la funcion solo se podra usar dentro de esta pagina (local)
 
 int function(int a,float b); - puedes pasar variables por parametro. Ej. function(40,0.5);
+
+
+Punteros
+
+int num		- variable integer
+int *num_ptr	- Declaramos un puntero integer
+
+Operadores
+
+&num		- direccion de la variable en memoria. Ej 0x1A20BBC4
+*num		- acceso a la variable que apunta
+
+Ejemplo
+
+num = 21;	- inicializamos num con 21 (valor)
+num_ptr = &num;	- al puntero le asignamos la direccion de memoria de num (no el valor)
+
+*num_ptr = 22;	- accedemos con el * al valor de donde apunta (21) y le cambiamos el valor por 22.
 
 
 

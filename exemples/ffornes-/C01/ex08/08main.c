@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rolopez- <rolopez-@student.42barcel>       +#+  +:+       +#+        */
+/*   By: ffornes- <ffornes-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/09 13:28:23 by rolopez-          #+#    #+#             */
-/*   Updated: 2021/12/09 17:10:14 by rolopez-         ###   ########.fr       */
+/*   Created: 2021/12/08 18:44:12 by ffornes-          #+#    #+#             */
+/*   Updated: 2021/12/09 14:41:42 by rolopez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	ft_ft(int *nbr)
+int	main(void)
 {
-	*nbr = 42;
+	int	arr[7] = { 42, 12, 15, 25, 2, 15, -12 };
+	int	i;
+	
+	ft_sort_int_tab(arr, 7);
+	i = 0;
+	while (i < 7)
+	{
+		printf("%d\n", arr[i]);
+		i++;
+	}
+	return (0);
 }

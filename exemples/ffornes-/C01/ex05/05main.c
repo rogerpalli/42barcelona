@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rolopez- <rolopez-@student.42barcel>       +#+  +:+       +#+        */
+/*   By: ffornes- <ffornes-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/09 13:28:23 by rolopez-          #+#    #+#             */
-/*   Updated: 2021/12/09 17:10:14 by rolopez-         ###   ########.fr       */
+/*   Created: 2021/12/08 15:08:21 by ffornes-          #+#    #+#             */
+/*   Updated: 2021/12/08 16:53:28 by ffornes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	ft_ft(int *nbr)
+void	ft_putstr(char *str);
+
+int	main(void)
 {
-	*nbr = 42;
+	char	str[] = "Oktorok reiniciame el pc";
+
+	ft_putstr(str);
+	return (0);
 }

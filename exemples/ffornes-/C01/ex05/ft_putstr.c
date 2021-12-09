@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rolopez- <rolopez-@student.42barcel>       +#+  +:+       +#+        */
+/*   By: ffornes- <ffornes-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/09 13:28:23 by rolopez-          #+#    #+#             */
-/*   Updated: 2021/12/09 17:10:14 by rolopez-         ###   ########.fr       */
+/*   Created: 2021/12/08 15:08:21 by ffornes-          #+#    #+#             */
+/*   Updated: 2021/12/08 16:25:44 by ffornes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <unistd.h>
 
-void	ft_ft(int *nbr)
+void	ft_putstr(char *str)
 {
-	*nbr = 42;
+	int		i;
+	char	a;	
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		a = str[i];
+		write(1, &a, 1);
+		i++;
+	}
 }

@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   07main.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rolopez- <rolopez-@student.42barcel>       +#+  +:+       +#+        */
+/*   By: ffornes- <ffornes-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/09 13:28:23 by rolopez-          #+#    #+#             */
-/*   Updated: 2021/12/09 17:10:14 by rolopez-         ###   ########.fr       */
+/*   Created: 2021/12/08 16:53:38 by ffornes-          #+#    #+#             */
+/*   Updated: 2021/12/08 16:55:25 by ffornes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	ft_ft(int *nbr)
+void	ft_rev_int_tab(int *tab, int size);
+
+int	main(void)
 {
-	*nbr = 42;
+	int	arr[6] = { 10, 12, 14, 16, 18, 20 };
+
+	ft_rev_int_tab(arr, 6);
+	return (0);
 }
