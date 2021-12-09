@@ -6,7 +6,7 @@
 /*   By: rolopez- <rolopez-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 12:49:10 by rolopez-          #+#    #+#             */
-/*   Updated: 2021/12/08 17:37:00 by rolopez-         ###   ########.fr       */
+/*   Updated: 2021/12/09 12:39:45 by rolopez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,14 @@ void	ft_print_comb2(void)
 	while (++number1[0] <= '9')
 	{
 		number1[1] = '0' -1;
-		while (++number1[1] <= '9')
+		while (++number1[1] <= '8')
 		{
 			number2[0] = '0' -1;
+			/*number2[0] = number1[0];*/
 			while (++number2[0] <= '9')
 			{
-				number2[1] = number1[1];
+				number2[1] = number1[1] -1;
+				/*number2[1] = '0' -1;*/
 				while (++number2[1] <= '9')
 				{					
 					write(1, &number1[0], 1);
@@ -34,7 +36,10 @@ void	ft_print_comb2(void)
 					write(1, " ", 1);
 					write(1, &number2[0], 1);
 					write(1, &number2[1], 1);
-					write(1, ", ", 2);
+					if (number1[0] != '9' || number1[1] != '8' || number2[0] != '9' || number2[1] != '9')
+					{
+						write(1, ", ", 2);
+					}
 				}
 			}	
 		}

@@ -1,0 +1,29 @@
+Credentials cache: API:764354BF-1DA4-4725-BD1F-1BFF83EBD7A4
+        Principal: ffusalba@42BARCELONA.COM
+
+  Issued                Expires               Principal
+Dec  2 12:13:32 2021  Dec  2 22:13:32 2021  krbtgt/42BARCELONA.COM@42BARCELONA.COM
+
+
+Credentials cache: API:4693F1C0-F65F-44A1-AF4A-3FA2AD25DE7D
+        Principal: ffusalba@42BARCELONA.COM
+
+  Issued                Expires               Principal
+Dec  2 12:00:56 2021  Dec  2 22:00:56 2021  krbtgt/42BARCELONA.COM@42BARCELONA.COM
+
+
+Credentials cache: API:784294EA-16C6-4048-853E-47F2FD0F4ECD
+        Principal: ffusalba@42BARCELONA.COM
+
+  Issued                Expires               Principal
+Dec  2 10:37:51 2021  Dec  2 20:37:51 2021  krbtgt/42BARCELONA.COM@42BARCELONA.COM
+
+
+Credentials cache: API:3B04F3E1-2A0B-49C2-8797-C0F8A6F91193
+        Principal: ffusalba@42BARCELONA.COM
+
+  Issued                Expires               Principal
+Dec  2 08:59:53 2021  Dec  2 18:59:53 2021  krbtgt/42BARCELONA.COM@42BARCELONA.COM
+Dec  2 08:59:55 2021  Dec  2 18:59:53 2021  HTTP/student-storage.42barcelona.com@42BARCELONA.COM
+
+

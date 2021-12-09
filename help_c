@@ -9,6 +9,7 @@ C00
 "gcc -Wall -Werror -Wextra" - muestra todos los errores
 fn + f1 - muestra header 42 (vim)
 Norminette - Corrige formato
+Norminette g -R CheckForbiddenSourceHeader / Corrige formato C01
 
 
 variables:
@@ -74,6 +75,7 @@ ej. "printf("Hello %d %c world\n", a, b);"
 \n - es un salto de linea
 %d - valor de la variable (ex. 107)
 %c - valor equivalent en char (ex. k)
+%p - valor de un puntero
 a, b - variables mostradas por orden de entrada
 
 
