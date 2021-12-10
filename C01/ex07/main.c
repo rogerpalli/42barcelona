@@ -1,19 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rolopez- <rolopez-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/09 13:28:23 by rolopez-          #+#    #+#             */
-/*   Updated: 2021/12/10 10:47:13 by rolopez-         ###   ########.fr       */
+/*   Created: 2021/12/07 11:30:35 by rolopez-          #+#    #+#             */
+/*   Updated: 2021/12/10 14:16:54 by rolopez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <unistd.h>
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+void ft_rev_int_tab(int *tab, int size);
+
+int	main(void)
 {
-	*div = a / b;
-	*mod = a % b;
+	int	array[5] = { 1, 2, 3, 4, 5 };
+	int i;
+	
+	i = 0;
+	for (i = 0; i < 5; ++i)
+	{
+	//	printf("%d", array[i]);
+    }
+	ft_rev_int_tab(array, 5);
+	i = 0;
+	for (i = 0; i < 5; ++i)
+    {
+	//	printf("%d", array[i]);
+    }
+	return(0);
 }

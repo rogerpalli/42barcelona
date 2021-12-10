@@ -9,7 +9,7 @@ C00
 "gcc -Wall -Werror -Wextra" - muestra todos los errores
 fn + f1 - muestra header 42 (vim)
 Norminette - Corrige formato
-Norminette -R CheckForbiddenSourceHeader / Corrige formato C01
+Norminette fichero.c -R CheckForbiddenSourceHeader / Corrige formato C01
 
 
 variables:
@@ -34,6 +34,7 @@ int tabla[n][m] - tabla de 2 dimensiones donde m  es el numero de columnas
 ej. "int a[10];" - donde a es una tabla de 10 elementos
 ej. "a[0] = 12;" - le damos el valor 12 a la primera posicion de la tabla
 ej. "a[0][b] = 12;" - le damos el valor 12 a la columna 0 y el valor de la variable b a la fila 3
+int tabla[5] = {0, 1, 2, 3, 4 ,5}; - asignamos valores manualmente
 
 
 operaciones:

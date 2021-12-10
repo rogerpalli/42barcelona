@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rolopez- <rolopez-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/09 13:28:23 by rolopez-          #+#    #+#             */
-/*   Updated: 2021/12/10 10:47:13 by rolopez-         ###   ########.fr       */
+/*   Created: 2021/12/07 11:30:35 by rolopez-          #+#    #+#             */
+/*   Updated: 2021/12/10 11:25:00 by rolopez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <unistd.h>
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+void	ft_putstr(char *str);
+
+int	main(void)
 {
-	*div = a / b;
-	*mod = a % b;
+	char	str[] = "Hello world!";
+
+	ft_putstr(str);
 }
