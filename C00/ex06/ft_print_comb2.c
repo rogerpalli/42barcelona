@@ -6,42 +6,57 @@
 /*   By: rolopez- <rolopez-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 12:49:10 by rolopez-          #+#    #+#             */
-/*   Updated: 2021/12/09 12:39:45 by rolopez-         ###   ########.fr       */
+/*   Updated: 2021/12/13 12:52:49 by rolopez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void	ft_write(int num)
+{
+	int	a;
+	int	b;
+
+	if (num > 9)
+	{
+		a = num / 10;
+		b = num % 10;
+		ft_putchar(a + 48);
+		ft_putchar(b + 48);
+	}
+	else
+	{
+		ft_putchar('0');
+		ft_putchar(num + 48);
+	}
+}
+
 void	ft_print_comb2(void)
 {
-	char	number1[2];
-	char	number2[2];
+	int	i;
+	int	j;
 
-	number1[0] = '0' -1;
-	while (++number1[0] <= '9')
+	i = 0;
+	while (i <= 99)
 	{
-		number1[1] = '0' -1;
-		while (++number1[1] <= '8')
+		j = i + 1;
+		while (j <= 99)
 		{
-			number2[0] = '0' -1;
-			/*number2[0] = number1[0];*/
-			while (++number2[0] <= '9')
+			ft_write(i);
+			ft_putchar(' ');
+			ft_write(j);
+			if (i < 98 || j < 99)
 			{
-				number2[1] = number1[1] -1;
-				/*number2[1] = '0' -1;*/
-				while (++number2[1] <= '9')
-				{					
-					write(1, &number1[0], 1);
-					write(1, &number1[1], 1);
-					write(1, " ", 1);
-					write(1, &number2[0], 1);
-					write(1, &number2[1], 1);
-					if (number1[0] != '9' || number1[1] != '8' || number2[0] != '9' || number2[1] != '9')
-					{
-						write(1, ", ", 2);
-					}
-				}
-			}	
+				ft_putchar(',');
+				ft_putchar(' ');
+			}
+			++j;
 		}
+		++i;
 	}
 }
