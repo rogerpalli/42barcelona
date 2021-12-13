@@ -9,6 +9,8 @@ mv - mover
 
 rm - borrar
 
+chmod -R 777 ./ - dar permisos totales a directorio y subdirectorios
+
 rm -rf .git - eliminar git
 git rm --cached client_folder
 

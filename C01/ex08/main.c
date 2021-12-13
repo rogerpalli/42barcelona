@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rolopez- <rolopez-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/09 13:28:23 by rolopez-          #+#    #+#             */
-/*   Updated: 2021/12/10 12:08:10 by rolopez-         ###   ########.fr       */
+/*   Created: 2021/12/07 11:30:35 by rolopez-          #+#    #+#             */
+/*   Updated: 2021/12/13 18:05:21 by rolopez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <unistd.h>
 
-int	ft_strlen(char *str)
-{
-	int	i;
+void ft_sort_int_tab(int *tab, int size);
 
+int	main(void)
+{
+	int	array[5] = { 2, -3, 1, 5, 4 };
+	int i;
+	
 	i = 0;
-	while (str[i] != '\0')
+	printf("La cadena inicial es:\n");
+	for (i = 0; i < 5; ++i)
 	{
-		i++;
-	}
-	return (i);
+		printf("%d", array[i]);
+    }
+	ft_sort_int_tab(array, 5);
+	printf("\nLa cadena ordenada es:\n");
+	i = 0;
+	for (i = 0; i < 5; ++i)
+    {
+		printf("%d", array[i]);
+    }
+	return(0);
 }
