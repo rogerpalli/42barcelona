@@ -1,22 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rolopez- <rolopez-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/09 13:28:23 by rolopez-          #+#    #+#             */
-/*   Updated: 2021/12/13 17:47:27 by rolopez-         ###   ########.fr       */
+/*   Created: 2021/12/07 11:30:35 by rolopez-          #+#    #+#             */
+/*   Updated: 2021/12/13 17:15:02 by rolopez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <unistd.h>
 
-void	ft_swap(int *a, int *b)
+void ft_sort_int_tab(int *tab, int size);
+
+int	main(void)
 {
-	int	c;
-
-	c = *a;
-	*a = *b;
-	*b = c;
+	int	array[5] = { 2, 3, 1, 5, 4 };
+	int i;
+	
+	i = 0;
+	printf("La cadena inicial es:\n");
+	for (i = 0; i < 5; ++i)
+	{
+		printf("%d", array[i]);
+    }
+	ft_sort_int_tab(array, 5);
+	printf("\nLa cadena ordenada es:\n");
+	i = 0;
+	for (i = 0; i < 5; ++i)
+    {
+		printf("%d", array[i]);
+    }
+	return(0);
 }
