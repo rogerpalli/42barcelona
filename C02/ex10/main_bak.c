@@ -1,38 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_outstr_non_printable.c                          :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rolopez- <rolopez-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/14 12:47:40 by rolopez-          #+#    #+#             */
-/*   Updated: 2021/12/16 13:58:08 by rolopez-         ###   ########.fr       */
+/*   Created: 2021/12/07 11:30:35 by rolopez-          #+#    #+#             */
+/*   Updated: 2021/12/15 16:11:35 by rolopez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+unsigned int ft_strlcpy(char *dest, char *src, unsigned int size);
 
-int	ft_str_is_printable(char *str)
+int	main(void)
 {
-	int		i;
-
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] < 32 || str[i] > 126)
-		{
-		//	ft_putchar('\\');
-			printf("%d", str[i]);
-		//	printf("%d", str[i] % 16);
-        //    printf("%d", str[i] / 16);	
-		} else putchar(str[i]);
-		i++;
-	}
-	return (0);
+	int n;
+	char str1[] = "Que tal?";
+	char str2[] = "Genial!";
+	
+	printf("La primera frase es: %s\n", str1);
+	printf("La segunda frase es: %s\n", str2);
+	n = ft_strlcpy(str2,str1,7);
+	printf("El string concatenado: %s\n", str1);
+	printf("El total de caracteres es: %d\n", n);
 }

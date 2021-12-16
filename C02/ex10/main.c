@@ -6,7 +6,7 @@
 /*   By: rolopez- <rolopez-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 11:30:35 by rolopez-          #+#    #+#             */
-/*   Updated: 2021/12/15 16:11:35 by rolopez-         ###   ########.fr       */
+/*   Updated: 2021/12/16 11:57:53 by rolopez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,14 @@ unsigned int ft_strlcpy(char *dest, char *src, unsigned int size);
 int	main(void)
 {
 	int n;
-	char str1[] = "Que tal?";
-	char str2[] = "Genial!";
+	unsigned int total;
+	char str1[] = "Hello world!";
+	char str2[12];
 	
-	printf("La primera frase es: %s\n", str1);
-	printf("La segunda frase es: %s\n", str2);
-	n = ft_strlcpy(str2,str1,7);
-	printf("El string concatenado: %s\n", str1);
-	printf("El total de caracteres es: %d\n", n);
+	total = 13;
+	printf("La frase original es: %s\n", str1);
+	printf("El numero de caracteres a copiar es: %d\n", total);
+	n = ft_strlcpy(str2,str1,total);
+	printf("La frase copiada es: %s\n", str2);
+	printf("Total de caracteres copiados es: %d\n", n);
 }
