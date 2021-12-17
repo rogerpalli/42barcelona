@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_outstr_non_printable.c                          :+:      :+:    :+:   */
+/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rolopez- <rolopez-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 12:47:40 by rolopez-          #+#    #+#             */
-/*   Updated: 2021/12/17 11:18:28 by rolopez-         ###   ########.fr       */
+/*   Updated: 2021/12/17 13:32:34 by rolopez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	ft_hex(char c)
 	}
 }
 
-int	ft_str_is_printable(char *str)
+void	ft_putstr_non_printable(char *str)
 {
 	int	i;
 
@@ -60,5 +60,4 @@ int	ft_str_is_printable(char *str)
 		}
 		i++;
 	}
-	return (0);
 }
