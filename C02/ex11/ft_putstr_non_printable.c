@@ -6,7 +6,7 @@
 /*   By: rolopez- <rolopez-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 12:47:40 by rolopez-          #+#    #+#             */
-/*   Updated: 2021/12/17 13:32:34 by rolopez-         ###   ########.fr       */
+/*   Updated: 2021/12/19 13:28:26 by rolopez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,30 +17,18 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_hex(char c)
+static void	ft_hex(int h)
 {
-	char	hex1;
-	char	hex2;
+	char	*hex;
 
-	ft_putchar('\\');
-	hex1 = c / 16;
-	hex2 = c % 16;
-	if (hex1 < 10)
+	hex = "0123456789abcdef";
+	if (h > 16)
 	{
-		ft_putchar(hex1 + 48);
+		ft_hex(h / 10);
+		ft_hex(h % 10);
 	}
 	else
-	{
-		ft_putchar(hex1 + 87);
-	}
-	if (hex2 < 10)
-	{
-		ft_putchar(hex2 + 48);
-	}
-	else
-	{
-		ft_putchar(hex2 + 87);
-	}
+		ft_putchar(hex[h]);
 }
 
 void	ft_putstr_non_printable(char *str)
@@ -50,8 +38,13 @@ void	ft_putstr_non_printable(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] < 32 || str[i] > 127)
+		if ((str[i] < 32 && str[i] >= 0) || str[i] > 127)
 		{
+			ft_putchar('\\');
+			if (str[i] < 16)
+			{
+				ft_putchar('0');
+			}
 			ft_hex(str[i]);
 		}
 		else
