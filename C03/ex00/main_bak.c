@@ -6,24 +6,35 @@
 /*   By: rolopez- <rolopez-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 11:30:35 by rolopez-          #+#    #+#             */
-/*   Updated: 2021/12/15 16:11:35 by rolopez-         ###   ########.fr       */
+/*   Updated: 2021/12/20 14:53:41 by rolopez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <unistd.h>
+#include <string.h>
 
-unsigned int ft_strlcpy(char *dest, char *src, unsigned int size);
+int ft_strcmp(char *s1, char *s2);
 
 int	main(void)
 {
 	int n;
-	char str1[] = "Que tal?";
-	char str2[] = "Genial!";
+	char str1[] = "Abcd";
+	char str2[] = "Abcde";
 	
-	printf("La primera frase es: %s\n", str1);
-	printf("La segunda frase es: %s\n", str2);
-	n = ft_strlcpy(str2,str1,7);
-	printf("El string concatenado: %s\n", str1);
-	printf("El total de caracteres es: %d\n", n);
+//	n = strcmp(str1, str2);
+//	printf("%d\n", n);
+	printf("El primer string es: %s\n", str1);
+	printf("El segundo string es: %s\n", str2);
+//	printf("%c", str1[0]);
+//	if (str1[0] < str2[0])
+//		printf("Mas peque");
+	n = ft_strcmp(str1,str2);
+	if (n > 0)
+		printf("El primer string es mas grande que el segundo");
+	else if (n == 0)
+		printf("Los dos strings son iguales");
+	else if (n < 0)
+		printf("El primer string es mas pequeno que el segundo");
 }
+
