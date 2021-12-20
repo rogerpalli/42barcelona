@@ -6,7 +6,7 @@
 /*   By: rolopez- <rolopez-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 12:47:40 by rolopez-          #+#    #+#             */
-/*   Updated: 2021/12/19 13:28:26 by rolopez-         ###   ########.fr       */
+/*   Updated: 2021/12/20 14:05:49 by rolopez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,40 +17,32 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-static void	ft_hex(int h)
+void	ft_hex(int hex)
 {
-	char	*hex;
-
-	hex = "0123456789abcdef";
-	if (h > 16)
-	{
-		ft_hex(h / 10);
-		ft_hex(h % 10);
-	}
-	else
-		ft_putchar(hex[h]);
+	if (hex > 9 && hex < 16)
+		ft_putchar(hex +87);
+	else 
+		ft_putchar(hex + '0');
 }
 
-void	ft_putstr_non_printable(char *str)
+void	ft_putstr_non_printable(unsigned char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i])
 	{
-		if ((str[i] < 32 && str[i] >= 0) || str[i] > 127)
+		if (str[i] < 32 || str[i] > 127)
 		{
 			ft_putchar('\\');
-			if (str[i] < 16)
-			{
+			if (str[i] >= 0 && str[i] < 16)
 				ft_putchar('0');
-			}
-			ft_hex(str[i]);
+			else
+				ft_hex(str[i] / 16);
+			ft_hex(str[i] % 16);
 		}
 		else
-		{
 			ft_putchar(str[i]);
-		}
 		i++;
 	}
 }
