@@ -3,22 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rolopez- <rolopez-@student.42barcel>       +#+  +:+       +#+        */
+/*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/07 11:30:35 by rolopez-          #+#    #+#             */
-/*   Updated: 2021/12/16 19:05:48 by rolopez-         ###   ########.fr       */
+/*   Created: 2019/06/10 14:59:19 by badam             #+#    #+#             */
+/*   Updated: 2021/12/20 13:50:40 by rolopez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <unistd.h>
 
-int ft_str_is_printable(char *str);
+char	*ft_putstr_non_printable(char *src);
 
-int	main(void)
+void	ft_putstr(char *str)
 {
-	char str1[] = "abc\nde\nfg\n";
-	
-	printf("El string de origen es:%s\n", str1);
-	ft_str_is_printable(str1);
+	int l;
+
+	l = 0;
+	while (str[l])
+	{
+		l++;
+	}
+	write(1, str, l);
+}
+
+int		main()
+{
+	char c[] = "Coucou\ntu vas bien ?";
+	ft_putstr("Coucou\\0atu vas bien ?:");
+	ft_putstr_non_printable(c);
+	char d[] = "\x81\xbe";
+	ft_putstr("\n\\81\\be:");
+	ft_putstr_non_printable(d);
 }

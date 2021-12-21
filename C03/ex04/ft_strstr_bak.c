@@ -1,48 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rolopez- <rolopez-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 12:47:40 by rolopez-          #+#    #+#             */
-/*   Updated: 2021/12/21 11:47:34 by rolopez-         ###   ########.fr       */
+/*   Updated: 2021/12/21 13:46:53 by rolopez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-void	ft_hex(int hex)
-{
-	if (hex > 9 && hex < 16)
-		ft_putchar(hex +87);
-	else
-		ft_putchar(hex + '0');
-}
-
-void	ft_putstr_non_printable(unsigned char *str)
+char *ft_strstr(char *str, char *to_find)
 {
 	int	i;
+	int	j;
+	int len;
+	int where;
 
 	i = 0;
-	while (str[i])
+	j = 0;
+	where = 0;
+	len = 0;
+	while (to_find[len])
 	{
-		if (str[i] < 32 || str[i] > 127)
-		{
-			ft_putchar('\\');
-			if (str[i] >= 0 && str[i] < 16)
-				ft_putchar('0');
-			else
-				ft_hex(str[i] / 16);
-			ft_hex(str[i] % 16);
-		}
-		else
-			ft_putchar(str[i]);
-		i++;
+		len++;
 	}
+	printf("El string a encontrar mide: %d\n", len);
+	if (len == 0)
+		return (str);
+	else
+	{
+		while (str[i])
+		{	
+			if (str[i] == to_find[j] && j <= len)
+			{
+				printf("%c", to_find[j]);
+				j++;
+				if (j == len)
+				printf("final cadena: %d", i-j+1);
+				return (&str[i-j+1]);
+	//			j++;
+			}
+			else
+				j = 0;
+			i++;
+		}
+	}
+	return (0);
 }
